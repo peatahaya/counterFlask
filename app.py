@@ -27,7 +27,7 @@ def user1(age):
 @app.route('/user2/<age>')
 def user2(age):
     if int(age) < 21:
-        return redirect(url_for('test'))
+        return redirect(url_for('user', age=21))
     else:
         return "Welcome to the adult section!"
 
